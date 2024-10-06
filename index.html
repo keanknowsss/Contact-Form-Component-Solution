@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
+
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,38 +16,57 @@
   </style>
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+<div class="container">
+  <main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <h1 class="title">Contact Us</h1>
+  
+      <form action="#">
+        <div class="row">
+          <div class="w-50-desktop">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first_name">
+            <p class="error" id="first-name-required-error">This field is required</p>
+          </div>
+          <div class="w-50-desktop">Last Name *</div>
+            <input type="text" id="last-name" name="last_name">
+            <p class="error" id="last-name-required-error">This field is required</p>
+        </div>
+        <div class="row">
+          <label for="email">Email Address *</label>
+          <p class="error" id="valid-email-error">Please enter a valid email address</p>
+          <p class="error" id="email-required-error">This field is required</p>
+        </div>
+        <div>
+          <p class="label">Query Type *</p>
+          <div class="row">
+            <div class="w-50-desktop"> <input type="checkbox" name="query_type" id="general-inquiry"><label for="general-enquiry">General Enquiry</label></div>
+            <div class="w-50-desktop"> <input type="checkbox" name="query_type" id="support-request"><label for="support-request">Support Request</label></div>
+          </div>
+          <div class="error" id="query-type-required-error">Please select a query type</div>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4"></textarea>
+          <p class="error" id="error">This field is required</p>
+        </div>
+        <div>
+          <input type="checkbox" name="consent" id="consent"> <label for="consent">I consent to being contacted by the team</label>
+          <p class="error" id="consent-required-error">To submit this form, please consent to being contacted</p>
+        </div>
+        
+        <button type="button" id="submit-btn">Submit</button>
+        <div class="success-alert">
+          Message Sent!
+          Thanks for completing the form. We'll be in touch soon!
+        </div>
+      </form>
+  </main>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+</div>
 </body>
 </html>

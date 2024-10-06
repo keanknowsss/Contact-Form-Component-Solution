@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    green-1: hsl(148, 38%, 91%);
+    green-2: hsl(169, 82%, 27%);
+    red-1: hsl(0, 66%, 54%);
+    white-1: hsl(0, 0%, 100%);
+    grey-1: hsl(186, 15%, 59%);
+    grey-2: hsl(187, 24%, 22%);
+}
+
+body {
+    background-color: hsl(148, 38%, 91%);
+    font-size: 16px;
+    /* font-family: ; */
+;
+}
+
+h1.title {
+    font-color: hsl(169, 82%, 27%)
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+
+main {
+    min-width: 500px;
+    width: 50%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 2rem;
+}
