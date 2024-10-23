@@ -1,27 +1,61 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+@font-face {
+    font-family: Karla-Italic;
+    src: url(./assets/fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Karla;
+    src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
 :root {
-    green-1: hsl(148, 38%, 91%);
-    green-2: hsl(169, 82%, 27%);
-    red-1: hsl(0, 66%, 54%);
-    white-1: hsl(0, 0%, 100%);
-    grey-1: hsl(186, 15%, 59%);
-    grey-2: hsl(187, 24%, 22%);
+    --green-1: hsl(148, 38%, 91%);
+    --green-2: hsl(169, 82%, 27%);
+    --red-1: hsl(0, 66%, 54%);
+    --white-1: hsl(0, 0%, 100%);
+    --grey-1: hsl(186, 15%, 59%);
+    --grey-2: hsl(187, 24%, 22%);
+    --black-1: #000000e0;
+    --black-2: #000000ea;
 }
 
 body {
-    background-color: hsl(148, 38%, 91%);
+    background-color: var(--green-1);
     font-size: 16px;
-    /* font-family: ; */
-;
+    font-family: 'Karla', sans-serif;
 }
 
 h1.title {
-    font-color: hsl(169, 82%, 27%)
+    font-color: hsl(169, 82%, 27%);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 2rem;
+    color: var(--black-2);
+}
+
+label,
+p,
+button {
+    opacity: 0.9;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+label,
+.label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--black-1);
 }
 
 .container {
@@ -40,4 +74,111 @@ main {
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     padding: 2rem;
+}
+
+.row,
+.row-radio {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+.w-50-desktop {
+    width: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.input-container,
+.radio-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.radio-input,
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--black-1);
+}
+
+.error {
+    color: red;
+    padding: 2px;
+}
+
+.error, .success-alert {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.radio-input {
+    border: 1px solid var(--black-1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.2);
+    /* IE */
+    -moz-transform: scale(1.2);
+    /* FF */
+    -webkit-transform: scale(1.2);
+    /* Safari and Chrome */
+    -o-transform: scale(1.2);
+    /* Opera */
+    transform: scale(1.2);
+}
+
+.radio-input label {
+    flex: 1;
+}
+
+textarea {
+    resize: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-container #consent {
+    padding: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container #submit-btn {
+    background-color: var(--green-2);
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
