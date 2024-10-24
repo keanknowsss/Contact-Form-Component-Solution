@@ -102,22 +102,24 @@
 							<p class="label">Query Type *</p>
 							<div class="row-radio">
 								<div class="w-50-desktop">
-									<div class="radio-input">
+									<label for="general-inquiry">
 										<input
 											type="radio"
 											name="query_type"
 											id="general-inquiry"
-										/><label for="general-inquiry">General Inquiry</label>
-									</div>
+										/>
+										<p>General Inquiry</p>
+									</label>
 								</div>
 								<div class="w-50-desktop">
-									<div class="radio-input">
+									<label for="support-request">
 										<input
 											type="radio"
 											name="query_type"
 											id="support-request"
-										/><label for="support-request">Support Request</label>
-									</div>
+										/>
+										<p>Support Request</p>
+									</label>
 								</div>
 							</div>
 						</div>
@@ -130,13 +132,13 @@
 					</div>
 					<div>
 						<div class="input-container">
-              <label for="message">Message *</label>
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-              ></textarea>
-            </div>
+							<label for="message">Message *</label>
+							<textarea
+								name="message"
+								id="message"
+								rows="5"
+							></textarea>
+						</div>
 						<p
 							class="error"
 							id="error"
