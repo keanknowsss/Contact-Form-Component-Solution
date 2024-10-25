@@ -18,7 +18,7 @@
 			rel="stylesheet"
 			href="./styles.css"
 		/>
-
+		<script src="./script.js" defer></script>
 		<title>Frontend Mentor | Contact form</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -79,7 +79,7 @@
 						<div class="input-container">
 							<label for="email">Email Address *</label>
 							<input
-								type="email"
+								type="text"
 								name="email"
 								id="email"
 							/>
@@ -107,6 +107,7 @@
 											type="radio"
 											name="query_type"
 											id="general-inquiry"
+											value="General Inquiry"
 										/>
 										<p>General Inquiry</p>
 									</label>
@@ -117,6 +118,7 @@
 											type="radio"
 											name="query_type"
 											id="support-request"
+											value="Support Request"
 										/>
 										<p>Support Request</p>
 									</label>
@@ -141,24 +143,27 @@
 						</div>
 						<p
 							class="error"
-							id="error"
+							id="message-required-error"
 						>
 							This field is required
 						</p>
 					</div>
-					<div class="checkbox-container">
-						<input
-							type="checkbox"
-							name="consent"
-							id="consent"
-						/>
-						<label for="consent">I consent to being contacted by the team *</label>
+					<div class="checkbox-row">
+						<div class="checkbox-container">
+							<input
+								type="checkbox"
+								name="consent"
+								id="consent"
+							/>
+							<label for="consent">I consent to being contacted by the team *</label>
+						
+						</div>
 						<p
-							class="error"
-							id="consent-required-error"
-						>
-							To submit this form, please consent to being contacted
-						</p>
+								class="error"
+								id="consent-required-error"
+							>
+								To submit this form, please consent to being contacted
+							</p>
 					</div>
 					<div class="button-container">
 						<button

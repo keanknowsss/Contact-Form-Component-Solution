@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+input:focus, textarea:focus {
+    outline: none;
+}
+
 @font-face {
     font-family: Karla-Italic;
     src: url(./assets/fonts/Karla-Italic-VariableFont_wght.ttf);
@@ -66,8 +70,7 @@ label,
     align-items: center;
     height: 100%;
     min-height: 100vh;
-    padding-top: 4rem;
-    padding-inline: 1rem;
+    padding: 4rem 1rem 1rem 1rem;
 }
 
 main {
@@ -114,6 +117,14 @@ textarea {
     transition: 0.1s ease-out border;
 }
 
+.error-input {
+    border: 1px solid rgba(255, 43, 43, 0.848) !important;
+    transition: 0.1s ease-out border !important;
+}
+
+.error-input:focus, .error-input:hover {
+    border: 1px solid red !important;
+}
 
 .input-container input[type="text"]:hover,
 .input-container input[type="email"]:hover,
@@ -164,14 +175,25 @@ textarea {
     resize: none;
 }
 
+.checkbox-row {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
 .checkbox-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .checkbox-container #consent {
     padding: 10px;
+}
+
+.checkbox-row p {
+    margin-left: -5px;
 }
 
 .button-container {
