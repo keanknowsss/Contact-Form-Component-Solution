@@ -39,7 +39,6 @@ body {
 }
 
 h1.title {
-    font-color: hsl(169, 82%, 27%);
     font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-size: 28px;
@@ -70,12 +69,12 @@ label,
     align-items: center;
     height: 100%;
     min-height: 100vh;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 7.3rem 1rem 1rem 1rem;
 }
 
 main {
     max-width: 500px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white-1);
     border-radius: 10px;
     padding: 2rem;
 }
@@ -118,12 +117,12 @@ textarea {
 }
 
 .error-input {
-    border: 1px solid rgba(255, 43, 43, 0.848) !important;
+    border: 1px solid var(--red-1) !important;
     transition: 0.1s ease-out border !important;
 }
 
 .error-input:focus, .error-input:hover {
-    border: 1px solid red !important;
+    border: 1px solid var(--red-1) !important;
 }
 
 .input-container input[type="text"]:hover,
@@ -158,6 +157,7 @@ textarea:hover {
 
 input[type="radio"],
 input[type="checkbox"] {
+    accent-color: var(--green-2);
     width: auto;
     /* Double-sized Checkboxes */
     -ms-transform: scale(1.2);
@@ -231,4 +231,38 @@ textarea {
     textarea {
         height: 12rem;
     }
+}
+
+#success-message {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--grey-2);
+    color: var(--white-1);
+    padding: 20px;
+    max-width: 375px;
+    width: 90%;
+    border-radius: 8px;
+    opacity: 0;
+    transition: ease-out 0.15s opacity; 
+}
+
+#success-message .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.title h4 {
+    margin-top: -2px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#success-message p {
+    font-weight: lighter;
+    font-size: 14px;
 }
