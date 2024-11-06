@@ -4,11 +4,23 @@ const consentBox = document.getElementById("consent");
 
 const submitBtn = document.getElementById("submit-btn");
 
+document.addEventListener("DOMContentLoaded", () => {
+    inputs[0].focus();
+})
+
 submitBtn.addEventListener("click", function() {
     if (!validateInputs()) return;
 
     const successMessage = document.getElementById("success-message"); 
     successMessage.style.opacity = 1;
+
+    inputs.forEach(input => {
+        input.value = "";
+    });
+
+    queryType.checked = false;
+    consentBox.checked = false;
+    inputs[0].focus();
 
     setTimeout(() => {
         successMessage.style.opacity = 0;

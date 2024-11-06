@@ -185,7 +185,7 @@ textarea {
 .checkbox-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
 }
 
 .checkbox-container #consent {
@@ -265,4 +265,8 @@ textarea {
 #success-message p {
     font-weight: lighter;
     font-size: 14px;
+}
+
+.attribution {
+    margin-top: 1.5rem;
 }
